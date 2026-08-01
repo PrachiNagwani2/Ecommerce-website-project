@@ -1,0 +1,410 @@
+/* ============================================
+   extra.css
+   Add-on styles for Shop, Blog, About, Contact
+   and Cart pages. Load this AFTER style.css.
+   Reuses the same color/spacing language as the
+   existing template (teal accent, light grey
+   sections, Poppins-style headings) so new pages
+   feel native to the rest of the site.
+   ============================================ */
+
+:root{
+  --accent:#088178;
+  --accent-dark:#04322f;
+  --bg-light:#f2f2f2;
+  --text-muted:#465b52;
+  --border:#e3e6f7;
+}
+
+/* ---------- Page banner (Shop/Blog/About/Contact/Cart hero) ---------- */
+#page-header{
+  width:100%;
+  padding:60px 80px;
+  background-image:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)), url("picturess/banner/b1.jpg");
+  background-size:cover;
+  background-position:center;
+  text-align:center;
+  color:#fff;
+}
+#page-header h2{
+  font-size:38px;
+  margin-bottom:10px;
+}
+#page-header p{
+  font-size:14px;
+}
+#page-header p a{
+  color:#fff;
+  text-decoration:underline;
+}
+
+/* ---------- Shop toolbar ---------- */
+#shop-toolbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px;
+  padding:20px 80px 0 80px;
+}
+#shop-toolbar select{
+  padding:8px 12px;
+  border:1px solid var(--border);
+  border-radius:4px;
+  color:var(--text-muted);
+}
+#shop-toolbar .result-count{
+  color:var(--text-muted);
+  font-size:14px;
+}
+
+/* ---------- Pagination ---------- */
+#pagination{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  padding:30px 0 60px 0;
+}
+#pagination a{
+  width:40px;
+  height:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid var(--border);
+  border-radius:4px;
+  color:#1a1a1a;
+  text-decoration:none;
+  transition:.3s;
+}
+#pagination a:hover,
+#pagination a.active{
+  background:var(--accent);
+  color:#fff;
+  border-color:var(--accent);
+}
+
+/* ---------- Blog ---------- */
+#blog{
+  padding:40px 80px;
+}
+.blog-container{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+.blog-box{
+  border:1px solid var(--border);
+  border-radius:10px;
+  overflow:hidden;
+  background:#fff;
+  transition:.2s;
+}
+.blog-box:hover{
+  box-shadow:20px 20px 30px rgba(0,0,0,.05);
+  transform:translateY(-5px);
+}
+.blog-img{
+  width:100%;
+  height:200px;
+  overflow:hidden;
+}
+.blog-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.blog-details{
+  padding:20px;
+}
+.blog-details .meta{
+  font-size:12px;
+  color:var(--accent);
+  text-transform:uppercase;
+  letter-spacing:.5px;
+  margin-bottom:8px;
+}
+.blog-details h4{
+  font-size:18px;
+  margin-bottom:10px;
+  line-height:1.4;
+}
+.blog-details p{
+  font-size:14px;
+  color:var(--text-muted);
+  margin-bottom:15px;
+}
+.blog-details a{
+  font-size:13px;
+  font-weight:600;
+  color:var(--accent);
+  text-decoration:none;
+}
+.blog-details a:hover{
+  text-decoration:underline;
+}
+
+/* ---------- About ---------- */
+#about-head{
+  display:flex;
+  align-items:center;
+  gap:50px;
+  padding:60px 80px;
+  flex-wrap:wrap;
+}
+#about-head img{
+  width:100%;
+  max-width:480px;
+  border-radius:10px;
+  flex:1 1 400px;
+}
+#about-head .about-text{
+  flex:1 1 400px;
+}
+#about-head .about-text h2{
+  font-size:30px;
+  margin-bottom:20px;
+  color:var(--accent-dark);
+}
+#about-head .about-text p{
+  font-size:15px;
+  line-height:1.8;
+  color:var(--text-muted);
+  margin-bottom:15px;
+}
+
+#about-stats{
+  display:flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+  gap:20px;
+  padding:50px 80px;
+  background:var(--bg-light);
+  text-align:center;
+}
+#about-stats .stat h1{
+  font-size:36px;
+  color:var(--accent);
+}
+#about-stats .stat p{
+  color:var(--text-muted);
+  font-size:14px;
+}
+
+#about-team{
+  padding:60px 80px;
+  text-align:center;
+}
+#about-team h2{
+  font-size:28px;
+  margin-bottom:10px;
+}
+#about-team > p{
+  color:var(--text-muted);
+  margin-bottom:40px;
+}
+.team-container{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:25px;
+}
+.team-box{
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:20px;
+  transition:.2s;
+}
+.team-box:hover{
+  box-shadow:20px 20px 30px rgba(0,0,0,.05);
+}
+.team-box img{
+  width:100%;
+  border-radius:8px;
+  margin-bottom:15px;
+}
+.team-box h4{
+  font-size:16px;
+}
+.team-box span{
+  font-size:13px;
+  color:var(--accent);
+}
+
+/* ---------- Contact ---------- */
+#contact-details{
+  display:flex;
+  justify-content:space-around;
+  gap:20px;
+  flex-wrap:wrap;
+  padding:50px 80px;
+}
+.contact-option{
+  flex:1 1 250px;
+  text-align:center;
+  padding:30px 20px;
+  border:1px solid var(--border);
+  border-radius:10px;
+}
+.contact-option i{
+  font-size:26px;
+  color:var(--accent);
+  margin-bottom:15px;
+}
+.contact-option h4{
+  margin-bottom:8px;
+}
+.contact-option p{
+  font-size:14px;
+  color:var(--text-muted);
+}
+
+#form-details{
+  display:flex;
+  gap:50px;
+  padding:20px 80px 70px 80px;
+  flex-wrap:wrap;
+}
+#form-details form{
+  flex:2 1 400px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+}
+#form-details form input,
+#form-details form textarea{
+  flex:1 1 45%;
+  padding:12px 15px;
+  border:1px solid var(--border);
+  border-radius:4px;
+  font-family:inherit;
+}
+#form-details form textarea{
+  flex:1 1 100%;
+  min-height:150px;
+  resize:vertical;
+}
+#form-details form button{
+  flex:1 1 100%;
+}
+#form-details iframe{
+  flex:1 1 300px;
+  min-height:300px;
+  border:0;
+  border-radius:10px;
+}
+
+/* ---------- Cart ---------- */
+#cart{
+  padding:40px 80px;
+}
+#cart table{
+  width:100%;
+  border-collapse:collapse;
+}
+#cart table th{
+  text-align:left;
+  padding:15px 10px;
+  border-bottom:2px solid var(--border);
+  font-size:14px;
+  color:var(--text-muted);
+  text-transform:uppercase;
+}
+#cart table td{
+  padding:15px 10px;
+  border-bottom:1px solid var(--border);
+  vertical-align:middle;
+}
+#cart .cart-info{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+#cart .cart-info img{
+  width:80px;
+}
+#cart .cart-info p{
+  font-weight:600;
+}
+#cart .cart-info small{
+  color:var(--text-muted);
+}
+#cart .quantity{
+  width:60px;
+  padding:8px;
+  border:1px solid var(--border);
+  border-radius:4px;
+  text-align:center;
+}
+#cart .cart-remove{
+  color:#c0392b;
+  cursor:pointer;
+  border:none;
+  background:none;
+  font-size:16px;
+}
+
+#cart-add button,
+#cart-add input{
+  padding:10px 20px;
+  border:1px solid var(--border);
+  border-radius:4px;
+}
+#cart-add{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:25px 0;
+  flex-wrap:wrap;
+  gap:15px;
+}
+
+#cart-total{
+  display:flex;
+  justify-content:flex-end;
+  padding-top:20px;
+}
+#cart-total table{
+  width:100%;
+  max-width:400px;
+}
+#cart-total table td{
+  padding:12px 10px;
+  border-bottom:1px solid var(--border);
+}
+#cart-total table tr:last-child td{
+  font-weight:700;
+  font-size:18px;
+  color:var(--accent-dark);
+  border-bottom:none;
+}
+#cart-total button{
+  width:100%;
+  margin-top:15px;
+}
+
+.empty-cart{
+  text-align:center;
+  padding:60px 20px;
+  color:var(--text-muted);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width:799px){
+  #page-header,#shop-toolbar,#about-head,#about-stats,#about-team,
+  #contact-details,#form-details,#cart{
+    padding-left:20px;
+    padding-right:20px;
+  }
+  .blog-container,.team-container{
+    grid-template-columns:repeat(2,1fr);
+  }
+  #cart table{
+    display:block;
+    overflow-x:auto;
+  }
+}
+@media (max-width:477px){
+  .blog-container,.team-container{
+    grid-template-columns:1fr;
+  }
+}

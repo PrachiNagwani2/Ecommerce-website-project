@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Cart | Prachi Ecommerce website</title>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="extra.css">
+</head>
+<body>
+
+<section id="header">
+<a href="index.html"> <img src="picturess/logo2.png" class="logo" alt=""></a>
+<div>
+<ul id="navbar">
+<li><a href="index.html">Home</a></li>
+<li><a href="shop.html">Shop</a></li>
+<li><a href="blog.html">Blog</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a class="active" href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+</ul>
+</div>
+</section>
+
+<section id="page-header">
+<h2>Your Cart</h2>
+<p>Home &gt; <a href="cart.html">Cart</a></p>
+</section>
+
+<section id="cart" class="section-p1">
+<table id="cart-table">
+<thead>
+<tr>
+<th>Product</th>
+<th>Price</th>
+<th>Quantity</th>
+<th>Subtotal</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+
+<tr data-price="78">
+<td class="cart-info">
+<img src="picturess/f1.jpeg" alt="">
+<div>
+<p>Cartoon Astronaut T-Shirts</p>
+<small>adidas</small>
+</div>
+</td>
+<td class="price">$78</td>
+<td><input type="number" class="quantity" value="1" min="1"></td>
+<td class="subtotal">$78</td>
+<td><button class="cart-remove" title="Remove"><i class="fas fa-times"></i></button></td>
+</tr>
+
+<tr data-price="65">
+<td class="cart-info">
+<img src="picturess/f2.jpg" alt="">
+<div>
+<p>Solid Full Sleeve Jacket</p>
+<small>adidas</small>
+</div>
+</td>
+<td class="price">$65</td>
+<td><input type="number" class="quantity" value="2" min="1"></td>
+<td class="subtotal">$130</td>
+<td><button class="cart-remove" title="Remove"><i class="fas fa-times"></i></button></td>
+</tr>
+
+<tr data-price="92">
+<td class="cart-info">
+<img src="picturess/f4.jpg" alt="">
+<div>
+<p>Running Sports Shoes</p>
+<small>nike</small>
+</div>
+</td>
+<td class="price">$92</td>
+<td><input type="number" class="quantity" value="1" min="1"></td>
+<td class="subtotal">$92</td>
+<td><button class="cart-remove" title="Remove"><i class="fas fa-times"></i></button></td>
+</tr>
+
+</tbody>
+</table>
+
+<div id="cart-add">
+<div>
+<input type="text" placeholder="Coupon code">
+<button class="normal">Apply Coupon</button>
+</div>
+<a href="shop.html"><button class="normal">Continue Shopping</button></a>
+</div>
+
+<div id="cart-total">
+<table>
+<tr>
+<td>Cart Subtotal</td>
+<td id="cart-subtotal">$300</td>
+</tr>
+<tr>
+<td>Shipping</td>
+<td>Free</td>
+</tr>
+<tr>
+<td>Total</td>
+<td id="cart-grand-total">$300</td>
+</tr>
+</table>
+</div>
+<div id="cart-total">
+<div style="max-width:400px;width:100%">
+<button class="normal" style="width:100%">Proceed to Checkout</button>
+</div>
+</div>
+
+</section>
+
+<section id="newsletter" class="section-p1 section-m1">
+<div class="newstext">
+<h4>Sign Up For newsletters</h4>
+<p>Get E-mail updates about our latest shop and <span> special offers.</span> </p>
+</div>
+<div class="form">
+<input type="text" placeholder="Your e-mail address">
+<button class="normal">Sign Up</button>
+</div>
+</section>
+
+<footer class="section-p1">
+<div class="col">
+<h4>Contact</h4>
+<p><strong>Address: </strong> 562 Wellington Road,Street 32,San Francisco</p>
+<p><strong>Phone:</strong> +01 2222 365 /(+91) 01 2345 6789</p>
+<p><strong>Hours:</strong> 10:00 - 18-00,Mon - Sat </p>
+<div class="follow">
+<h4>Follow us</h4>
+<div class="icon">
+<i class="fab fa-facebook-f"></i>
+<i class="fab fa-twitter"></i>
+<i class="fab fa-instagram"></i>
+<i class="fab fa-pinterest-p"></i>
+<i class="fab fa-youtube"></i>
+</div>
+</div>
+</div>
+<div class="col">
+<h4>About</h4>
+<a href="about.html">About us</a>
+<a href="#">Delivery Information</a>
+<a href="#">Privacy Policy</a>
+<a href="#">Terms & Conditions</a>
+<a href="contact.html">Contact Us</a>
+</div>
+<div class="col">
+<h4>My Account</h4>
+<a href="#">Sign In</a>
+<a href="cart.html">View Cart</a>
+<a href="#">My Wishlist</a>
+<a href="#">Track My Order</a>
+<a href="#">Help</a>
+</div>
+<div class="col install">
+<h4>Install App</h4>
+<p>From App Store or Google Play</p>
+<div class="row">
+<img src="newArrivals/app.jpg" alt="">
+<img src="newArrivals/play.jpg" alt="">
+</div>
+<p>Secured Payment Gateways</p>
+<img src="newArrivals/pay.png" alt="">
+</div>
+<div class="copyright">
+<p>@ 2026, Tech2 etc - HTML CSS Ecommerce Template</p>
+</div>
+</footer>
+
+<script src="script.js"></script>
+<script src="cart.js"></script>
+</body>
+</html>
